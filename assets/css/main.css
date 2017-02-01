@@ -1,0 +1,336 @@
+/* BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    min-height: 100%;
+}
+body {
+    font-family: "Lora", serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    background: #E4E1CE;
+    color: #43574E;
+    height: 100%;
+    position: relative;
+}
+a {
+    color: #43574E;
+    text-decoration: none;
+    font-weight: 700;
+}
+main {
+    background: #43574E;
+    transition: background-color 600ms linear;
+    display: block;
+}
+main,
+main a {
+    color: #ffffff;
+}
+@media (min-width: 1050px) {
+    main {
+        margin-left: 0;
+        transform: translate3d(-100%, 0, 0);
+        animation: slideMain 1400ms 600ms forwards cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    .no-js main {
+        margin-left: 50%;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+}
+.small,
+small {
+    font-size: 13px;
+    line-height: 2.0000em;
+    /* 26px */
+    
+    padding-top: 2.0000em;
+    padding-bottom: 0;
+    letter-spacing: 0;
+}
+.base,
+p,
+ul,
+ol,
+dl {
+    font-size: 16px;
+    line-height: 1.6250em;
+    /* 26px */
+    
+    padding-top: 1.6250em;
+    padding-bottom: 0;
+    letter-spacing: 0;
+}
+.medium,
+h4 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+}
+.large,
+h3 {
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.0000em;
+    /* 26px */
+    
+    padding-top: 1.0000em;
+    padding-bottom: 0;
+}
+.xlarge,
+h2 {
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2381em;
+    /* 52px */
+    
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+}
+.xxlarge,
+h1 {
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 68px;
+    font-weight: 300;
+    line-height: 1.1471em;
+    /* 78px */
+    
+    padding-top: 0.3824em;
+    padding-bottom: 0;
+    text-transform: uppercase;
+}
+.huge {
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 110px;
+    font-weight: 300;
+    line-height: 1.19em;
+    /* 130px */
+    
+    padding-top: 0.2364em;
+    padding-bottom: 0;
+    text-transform: uppercase;
+}
+li > p {
+    padding-top: 0;
+}
+header {
+    padding: 26px 26px 52px;
+}
+@media (min-width: 600px) {
+    header {
+        padding: 26px 52px 52px;
+    }
+}
+@media (min-width: 800px) {
+    header {
+        padding: 52px 78px 78px;
+    }
+}
+@media (min-width: 1050px) {
+    header {
+        padding-top: 0;
+        padding-bottom: 0;
+        position: fixed;
+        height: 100%;
+        width: 50%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        animation: showCopy 0ms 1400ms linear forwards;
+    }
+}
+@media (min-width: 1050px) {
+    header .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 475px;
+        margin-right: 52px;
+    }
+}
+header .title {
+    position: relative;
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+}
+header .title:after {
+    content: "";
+    width: 100%;
+    max-width: 104px;
+    height: 10px;
+    background: #43574E;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+header .subtitle {
+    font-weight: 700;
+}
+@media (min-width: 1050px) {
+    header .subtitle {
+        opacity: 0;
+        animation: fadeIn 800ms 500ms ease-in-out forwards;
+    }
+}
+header .intro {
+    padding: 0;
+    margin-bottom: 26px;
+}
+@media (min-width: 1050px) {
+    header .intro {
+        opacity: 0;
+        animation: fadeIn 800ms 550ms ease-in-out forwards;
+    }
+}
+.projects {
+    list-style: none;
+    padding: 26px;
+}
+@media (min-width: 600px) {
+    .projects {
+        padding: 52px;
+    }
+}
+@media (min-width: 800px) {
+    .projects {
+        padding: 26px 78px;
+    }
+}
+@media (min-width: 1050px) {
+    .projects {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        opacity: 0;
+        animation: showProjects 1800ms 1800ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    }
+}
+.project {
+    position: relative;
+}
+.project .link {
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    padding: 26px 0 25px;
+    font-weight: normal;
+    transition: box-shadow 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.project .link:hover {
+    box-shadow: inset 0 -9px 0 0 #ffffff;
+}
+.project .name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+    padding: 0;
+    color: #ADBBC4;
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.project .description {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.3000em;
+    /* 26px */
+    
+    padding-top: 1.3000em;
+    padding-bottom: 0;
+    padding: 0;
+    font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.tags {
+    list-style: none;
+    padding: 0;
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 26px;
+    display: none;
+}
+@media (min-width: 600px) {
+    .tags {
+        display: block;
+    }
+}
+.tag {
+    display: inline-block;
+}
+.tag:after {
+    content: ",\00a0";
+}
+.tag:last-child:after {
+    content: "";
+}
+@keyframes fadeIn {
+    0% {
+        transform: translateY(-6px);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes showCopy {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes expandBar {
+    100% {
+        height: 100%;
+    }
+}
+@keyframes slideMain {
+    10% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: 50%;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes showProjects {
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes backgroundColorChanger {
+    100% {
+        background-color: white;
+    }
+}
+@keyframes colorChanger {
+    100% {
+        color: white;
+    }
+}
