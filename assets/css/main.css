@@ -270,10 +270,6 @@ header .intro {
     font-size: 13px;
     font-style: italic;
     text-align: right;
-    position: absolute;
-    right: 0;
-    bottom: 26px;
-    display: none;
 }
 @media (min-width: 600px) {
     .tags {
